@@ -1,0 +1,28 @@
+body
+{
+	background-color: #2F4F4F;
+font-family: Arial, Helvetica, san-serif;
+	font-size: 16px; 
+	font-weight: nomal;
+
+	font: 16px Arial, Helvetica, san-serif; 
+	line-height: 1.6em;
+	margin: 0;
+}
+.header
+{
+	background-color: #778899;
+	color: indigo;
+	text-align: center;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-right:20px;
+	padding-bottom: 20px;
+}
+#menu-back
+{
+		float:left;
+	width: 90%;
+	border: 6.5px inset #696969;
+	box-sizing: border-box;
+	}

@@ -1,0 +1,50 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg {
+    
+    background-image: url("tutor.jpg");
+  
+    
+    height: 100%; 
+  
+    
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+
+.container1 {
+	width: 100%;
+	margin: auto;
+	overflow: auto;
+}
+#header {
+	background-color: #66e0ff;
+	color:#000000;
+}
+#links {
+    height:100px;
+    widows: 100px;;
+    background-color: #ffccff;
+}
+
+#links a {
+	color:#000000;
+    text-align:right;
+    font: 1em sans-serif;
+    font-weight: bold;
+    
+}
+#links li {
+	display: inline;
+}
+
+#main-footer {
+	text-align: center;
+	padding: 15px;
+	margin-top: 150px;
+}

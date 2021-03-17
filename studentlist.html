@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Teacher search</title>
+
+    <style> body {
+        background-color:#99b3e6;
+      }
+      
+      .new {
+           text-align: center;  
+
+      }
+      </style>
+   
+
+    </head>
+
+    <body>
+
+        <h1><center><u>Displaying The list of Student</u></center>  </h1>
+        <div class="new">
+        <button  id="grab">Display</button>
+        <button class="btn-danger btn"> <a href="tuitorhomepage.html" >Back </a>  </button>
+        </div>
+        <div id="universities"></div>
+    <script>
+
+    document.getElementById('grab').addEventListener('click', showValues);
+    function showValues() {
+        var req = new XMLHttpRequest();
+        req.open('GET','returnvalues.php',true );
+
+        req.onload = function(){
+            if(req.status==200){
+            var namez = JSON.parse(req.responseText);
+            var display = '';
+
+            for (var i in namez){
+                display += '<ul>'+
+                    '<li>ID: '+namez[i].id+'</li>'+
+                    '<li>Name: '+namez[i].name+'</li>'+
+                    '<li>Email: '+namez[i].email+'</li>'+
+                    '<li>Subject: '+namez[i].subject+'</li>'+
+                    '<li>Phone: '+namez[i].phone+'</li>'+
+                    '<li>Address: '+namez[i].address+'</li>'+
+                    
+                    '</ul>';
+                   
+
+            }
+            document.getElementById('universities').innerHTML=display;
+        }
+    }
+        req.send();
+    }
+    </script>
+
+
+    </body>
